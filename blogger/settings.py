@@ -75,17 +75,29 @@ WSGI_APPLICATION = 'blogger.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'blog_posts',
+#         'HOST': 'localhost',
+#         'USER': 'root',
+#         'PASSWORD':'root',
+#         'POST': 3306,
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'blog_posts',
-        'HOST': 'localhost',
-        'USER': 'root',
-        'PASSWORD':'root',
-        'POST': 3306,
+        'NAME': 'top10blogsdb$blogs',  # find in database section
+        'USER': 'top10blogsdb',
+        'PASSWORD': 'root1234',
+        'HOST': 'top10blogsdb.mysql.pythonanywhere-services.com',
+        'OPTIONS': {
+            "init_command": "SET sql_mode='STRICT_TRANS_TABLES'",
+        }
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
