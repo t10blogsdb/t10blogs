@@ -1,7 +1,7 @@
 from blogs.forms import Createnewpost
 from django.shortcuts import render,redirect
 from .models import Blogs, static_data
-import pyrebase
+# import pyrebase
 from .forms import Createnewpost
 
 # config = {
